@@ -2,13 +2,13 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
 export const environment = {
   production: false
 };
-
 export const weatherBit = {
   config: {
-    host: "https://api.weatherbit.io",
+    baseUrl: "https://api.weatherbit.io/v2.0/forecast/daily",
     apiKey: "9a5998ee5d48450699efa4951f4d9cee"
   }
 };

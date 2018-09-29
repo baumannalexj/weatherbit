@@ -15,7 +15,7 @@ export class AppComponent {
   searchText: string;
 
   constructor(private http: HttpClient) {
-    this.weatherBitUrl = `${weatherBit.config.host}/v2.0/forecast/daily?city=detroit&state=michigan&key=${weatherBit.config.apiKey}`;
+    this.weatherBitUrl = `${weatherBit.config.baseUrl}?city=detroit&state=michigan&key=${weatherBit.config.apiKey}`;
     this.weatherData = [];
     this.cityDetails = {
       cityName: "",
@@ -27,7 +27,7 @@ export class AppComponent {
   }
 
   getWeather(){
-    this.weatherBitUrl = `${weatherBit.config.host}/v2.0/forecast/daily?city=${this.searchText}&key=${weatherBit.config.apiKey}`;
+    this.weatherBitUrl = `${weatherBit.config.baseUrl}?city=${this.searchText}&key=${weatherBit.config.apiKey}`;
 
     this.http
       .get(this.weatherBitUrl)
