@@ -1,5 +1,5 @@
 <div>
-  <h3>{{cityDetails.cityName}}, {{cityDetails.stateCode}}</h3>
+  <h3>{{cityDetails.name}}, {{cityDetails.state}}</h3>
   <input
     placeholder="detroit,mi"
     autofocus
@@ -10,8 +10,8 @@
   </button>
 </div>
 
-<div *ngFor="let data of weatherForecasts">
+<div *ngFor="let data of this.weatherForecasts">
   <div>
-    <span>{{data.datetime}} : High of {{data.max_temp}} deg</span>
+    <span>{{data.dateTime}} : High of {{data.maxTemp}} deg</span>
   </div>
 </div>

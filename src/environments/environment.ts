@@ -8,7 +8,7 @@ export const environment = {
 
 export const weatherBit = {
   config: {
-    host: "https://api.weatherbit.io",
+    baseUrl: "https://api.weatherbit.io/v2.0/forecast/daily",
     apiKey: "9a5998ee5d48450699efa4951f4d9cee"
   }
 };
