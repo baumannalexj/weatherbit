@@ -7,10 +7,4 @@ export class CityDetails {
     this.state = state;
 
   }
-
-  getCityState(){
-    return name
-      ? `${this.name}, ${this.state}`
-      : "";
-  }
 }
