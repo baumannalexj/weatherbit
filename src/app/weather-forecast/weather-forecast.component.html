@@ -1,17 +1,13 @@
 <div>
-  <h3>{{cityDetails.name}}, {{cityDetails.state}}</h3>
   <input
     placeholder="detroit,mi"
     autofocus
     [(ngModel)]="searchText"
   />
-  <button (click)="getWeather()">
-    get weather
-  </button>
+
+  <app-weather-forecast-list [searchText]="searchText" >
+  </app-weather-forecast-list>
+
 </div>
 
-<div *ngFor="let data of this.weatherForecasts">
-  <div>
-    <span>{{data.dateTime}} : High of {{data.maxTemp}} deg</span>
-  </div>
-</div>
+

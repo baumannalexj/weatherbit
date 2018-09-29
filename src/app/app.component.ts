@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Input} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'weather app';
+
+  @Input('searchText') searchText: string;
+
+  constructor(){}
 
 }
