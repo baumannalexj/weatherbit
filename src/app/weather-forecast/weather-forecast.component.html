@@ -1,3 +1,11 @@
-<p>
-  weather-forecast works!
-</p>
+<div>
+  <input
+    placeholder="detroit,mi"
+    autofocus
+    [(ngModel)]="searchText"
+  />
+
+  <app-weather-forecast-list [searchText]="searchText" >
+  </app-weather-forecast-list>
+
+</div>

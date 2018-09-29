@@ -5,11 +5,13 @@ import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
+import { WeatherForecastListComponent } from './weather-forecast-list/weather-forecast-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherForecastComponent
+    WeatherForecastComponent,
+    WeatherForecastListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<div>
+  <button (click)="getWeather()">get weather</button>
+
+  <table>
+    <tr>
+       <th>
+        {{cityDetails.name
+            ? cityDetails.name + ", " + cityDetails.state
+            : ""
+        }}
+      </th>
+      <th>High Temps</th>
+    </tr>
+    <tr *ngFor="let data of this.weatherForecasts">
+      <td >{{data.dateTime | date: "MMM d, yy"}}</td>
+      <td >{{data.maxTemp}}&deg;</td>
+    </tr>
+  </table>
+
+
+</div>

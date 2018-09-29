@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Input} from '@angular/core';
 
 @Component({
   selector: 'app-weather-forecast',
@@ -7,11 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class WeatherForecastComponent implements OnInit {
 
-  @Input() weatherForecasts: any[];
+  @Input() searchText: string;
 
-  constructor() {
-    console.log('weather forecast component')
-  }
+  constructor() {}
 
   ngOnInit() {
   }
