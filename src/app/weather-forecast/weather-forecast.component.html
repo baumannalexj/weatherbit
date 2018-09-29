@@ -1,3 +1,17 @@
-<p>
-  weather-forecast works!
-</p>
+<div>
+  <h3>{{cityDetails.cityName}}, {{cityDetails.stateCode}}</h3>
+  <input
+    placeholder="detroit,mi"
+    autofocus
+    [(ngModel)]="searchText"
+  />
+  <button (click)="getWeather()">
+    get weather
+  </button>
+</div>
+
+<div *ngFor="let data of weatherForecasts">
+  <div>
+    <span>{{data.datetime}} : High of {{data.max_temp}} deg</span>
+  </div>
+</div>
